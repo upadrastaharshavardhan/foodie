@@ -1,19 +1,117 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <title>Payment Page</title>
     <style>
-      .success-message {
+      /* Style for the payment form */
+      .payment-form {
+        width: 400px;
+        margin: 0 auto;
         text-align: center;
-        padding: 50px;
-        font-size: 20px;
-        font-weight: bold;
-        color: green;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      /* Style for the payment options */
+      .payment-options {
+        margin-top: 20px;
+        display: inline-block;
+        text-align: left;
+        width: 100%;
+      }
+      /* Style for the cash option */
+      .cash-option {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+      /* Style for the credit/debit card option */
+      .card-option {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+      /* Style for the selected option */
+      .selected {
+        background-color: #ddd;
+      }
+      /* Style for the form inputs */
+      .payment-form input[type="text"],
+      .payment-form input[type="number"],
+      .payment-form select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      /* Style for the submit button */
+      .payment-form input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
       }
     </style>
   </head>
   <body>
-    <div class="success-message">
-      Payment Successful! Thank you for your purchase.
-    </div>
-  </body>
+    <!-- Payment Form -->
+    <form class="payment-form">
+      <!-- Payment Options -->
+      <div class="payment-options">
+        <!-- Cash Option -->
+        <div class="cash-option">
+          <input type="radio" name="payment-option" value="cash" id="cash-option">
+          <label for="cash-option">Cash</label>
+        </div>
+        <!-- Credit/Debit Card Option -->
+        <div class="card-option">
+          <input type="radio" name="payment-option" value="card" id="card-option">
+          <label for="card-option">Credit/Debit Card</label>
+        </div>
+      </div>
+      <!-- Credit/Debit Card Information -->
+      <div class="card-info">
+        <!-- Cardholder Name -->
+        <input type="text" placeholder="Cardholder Name">
+        <!-- Card Number -->
+        <input type="number" placeholder="Card Number">
+        <!-- Expiration Month -->
+        <select>
+          <option value="">Month</option>
+          <option value="01">01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
+          <option value="07">07</option>
+          <option value="08">08</option>
+          <option value="09">09</option>
+          <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>
+    <!-- Expiration Year -->
+    <select>
+      <option value="">Year</option>
+      <option value="2024">2024</option>
+      <option value="2025">2025</option>
+      <option value="2026">2026</option>
+      <option value="2027">2027</option>
+      <option value="2028">2028</option>
+    </select>
+    <!-- CVV -->
+    <input type="number" placeholder="CVV">
+  </div>
+  <!-- Submit Button -->
+  <input type="submit" value="Submit">
+</form> </body>
 </html>
